@@ -6,11 +6,11 @@
     <title>Next Level Digital, LLC</title>
     <meta
       name="description"
-      content="Next Level Digital, LLC — AI-powered digital products led by SynapseAI, our flagship affordable AI and machine learning education platform." />
+      content="Next Level Digital, LLC is an AI-powered software company building premium products for learning, operations, and real-world problem solving." />
     <meta property="og:title" content="Next Level Digital, LLC" />
     <meta
       property="og:description"
-      content="Explore Next Level Digital products, including SynapseAI — the flagship affordable AI and machine learning education platform for self-paced career changers." />
+      content="Explore Next Level Digital, LLC — an AI-powered software company with a live flagship product, SynapseAI, plus an expanding portfolio including Project Pro and HIKED." />
     <meta property="og:image" content="./assets/logo_concept_03_brain.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +25,7 @@
         --panel: rgba(10, 20, 36, 0.78);
         --panel-strong: rgba(8, 17, 31, 0.92);
         --line: rgba(78, 221, 255, 0.18);
-        --line-strong: rgba(78, 221, 255, 0.32);
+        --line-strong: rgba(78, 221, 255, 0.34);
         --text: #eff8ff;
         --muted: #9db2c8;
         --muted-2: #7f95ac;
@@ -33,8 +33,8 @@
         --cyan-2: #13b8ff;
         --green: #2dffb2;
         --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-        --radius: 24px;
-        --radius-sm: 16px;
+        --radius: 28px;
+        --radius-sm: 18px;
         --max: 1200px;
       }
 
@@ -44,16 +44,18 @@
 
       html {
         scroll-behavior: smooth;
+        overflow-x: hidden;
       }
 
       body {
         margin: 0;
+        overflow-x: hidden;
         font-family: "Rajdhani", system-ui, sans-serif;
         color: var(--text);
         background:
-          radial-gradient(circle at top left, rgba(45, 255, 178, 0.12), transparent 26%),
+          radial-gradient(circle at top left, rgba(45, 255, 178, 0.12), transparent 24%),
           radial-gradient(circle at top right, rgba(50, 216, 255, 0.16), transparent 28%),
-          linear-gradient(180deg, #091220 0%, #08111f 35%, #07101d 100%);
+          linear-gradient(180deg, #091220 0%, #08111f 38%, #07101d 100%);
       }
 
       img {
@@ -72,11 +74,13 @@
       }
 
       .eyebrow {
-        display: inline-block;
-        padding: 0.4rem 0.8rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.45rem 0.9rem;
         border: 1px solid var(--line);
         border-radius: 999px;
-        font-size: 0.85rem;
+        font-size: 0.84rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
         color: var(--cyan);
@@ -119,7 +123,7 @@
         top: 0;
         z-index: 100;
         backdrop-filter: blur(18px);
-        background: rgba(7, 16, 29, 0.74);
+        background: rgba(7, 16, 29, 0.76);
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       }
 
@@ -137,14 +141,22 @@
         gap: 0.9rem;
       }
 
-      .brand-mark {
+      .brand-badge {
         width: 52px;
         height: 52px;
-        object-fit: contain;
+        display: grid;
+        place-items: center;
         border-radius: 16px;
-        padding: 0.35rem;
-        background: rgba(50, 216, 255, 0.08);
         border: 1px solid var(--line);
+        background:
+          radial-gradient(circle at top left, rgba(45, 255, 178, 0.18), transparent 55%),
+          linear-gradient(135deg, rgba(50, 216, 255, 0.18), rgba(8, 17, 31, 0.94));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        font-family: "Exo 2", system-ui, sans-serif;
+        font-size: 1rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        color: var(--text);
       }
 
       .brand-copy strong,
@@ -185,7 +197,7 @@
       .hero {
         position: relative;
         overflow: hidden;
-        padding: 6rem 0 4rem;
+        padding: 6.4rem 0 4rem;
       }
 
       .hero::before,
@@ -194,7 +206,7 @@
         position: absolute;
         inset: auto;
         border-radius: 999px;
-        filter: blur(60px);
+        filter: blur(64px);
         pointer-events: none;
       }
 
@@ -207,8 +219,8 @@
       }
 
       .hero::after {
-        width: 420px;
-        height: 420px;
+        width: 440px;
+        height: 440px;
         right: -8rem;
         top: 1rem;
         background: rgba(50, 216, 255, 0.14);
@@ -218,17 +230,22 @@
         position: relative;
         z-index: 1;
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
+        grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
         gap: 2rem;
         align-items: center;
+      }
+
+      .hero-copy {
+        min-width: 0;
+        max-width: 720px;
       }
 
       .hero h1 {
         margin: 1rem 0 1rem;
         font-family: "Exo 2", system-ui, sans-serif;
-        font-size: clamp(2.6rem, 7vw, 5.6rem);
+        font-size: clamp(2.9rem, 7vw, 5.8rem);
         line-height: 0.94;
-        letter-spacing: -0.03em;
+        letter-spacing: -0.04em;
       }
 
       .hero h1 .gradient {
@@ -239,18 +256,25 @@
       }
 
       .hero p.lead {
-        max-width: 760px;
-        margin: 0 0 1.4rem;
-        font-size: clamp(1.1rem, 2.2vw, 1.45rem);
-        line-height: 1.45;
+        margin: 0 0 1rem;
+        font-size: clamp(1.08rem, 2.15vw, 1.4rem);
+        line-height: 1.5;
         color: var(--muted);
+      }
+
+      .hero p.sublead {
+        margin: 0 0 1.4rem;
+        max-width: 680px;
+        color: var(--muted);
+        font-size: 1.04rem;
+        line-height: 1.6;
       }
 
       .hero-points {
         display: flex;
         flex-wrap: wrap;
         gap: 0.75rem;
-        margin: 1.4rem 0 2rem;
+        margin: 1.5rem 0 1.7rem;
       }
 
       .hero-points span {
@@ -259,7 +283,7 @@
         border: 1px solid var(--line);
         background: rgba(255, 255, 255, 0.03);
         color: var(--text);
-        font-size: 0.98rem;
+        font-size: 0.96rem;
       }
 
       .hero-actions {
@@ -268,19 +292,44 @@
         gap: 0.9rem;
       }
 
+      .hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin-top: 1.7rem;
+      }
+
+      .metric-card {
+        padding: 1rem;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      }
+
+      .metric-card strong {
+        display: block;
+        margin-bottom: 0.35rem;
+        font-family: "Exo 2", system-ui, sans-serif;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        line-height: 1;
+      }
+
+      .metric-card span {
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.45;
+      }
+
       .hero-panel {
         border: 1px solid var(--line);
         border-radius: 32px;
-        background: linear-gradient(180deg, rgba(12, 23, 40, 0.9), rgba(7, 16, 29, 0.88));
+        background: linear-gradient(180deg, rgba(12, 23, 40, 0.9), rgba(7, 16, 29, 0.9));
         box-shadow: var(--shadow);
         padding: 1.25rem;
       }
 
-      .hero-brand-card {
-        overflow: hidden;
-      }
-
-      .hero-brand-card .topline {
+      .company-panel .topline {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -288,14 +337,14 @@
         margin-bottom: 1rem;
       }
 
-      .hero-brand-card .topline span:first-child {
+      .company-panel .topline span:first-child {
         color: var(--cyan);
         font-size: 0.92rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
       }
 
-      .hero-brand-card .topline span:last-child {
+      .company-panel .topline span:last-child {
         padding: 0.45rem 0.8rem;
         border-radius: 999px;
         color: #06141d;
@@ -303,48 +352,98 @@
         background: linear-gradient(135deg, var(--green), var(--cyan));
       }
 
-      .hero-brand-card .logo-frame {
-        padding: 1.25rem;
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.06);
+      .company-anchor {
+        position: relative;
+        overflow: hidden;
+        padding: 1.5rem;
+        border-radius: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
         background:
-          radial-gradient(circle at left center, rgba(45, 255, 178, 0.11), transparent 40%),
-          radial-gradient(circle at right center, rgba(50, 216, 255, 0.12), transparent 38%),
-          rgba(4, 11, 21, 0.8);
+          radial-gradient(circle at top left, rgba(45, 255, 178, 0.12), transparent 35%),
+          radial-gradient(circle at bottom right, rgba(50, 216, 255, 0.12), transparent 40%),
+          rgba(4, 11, 21, 0.84);
       }
 
-      .hero-brand-card .logo-frame img {
-        width: 100%;
-        max-width: 520px;
-        margin: 0 auto;
-        object-fit: contain;
+      .company-anchor::after {
+        content: "NLD";
+        position: absolute;
+        right: 1rem;
+        bottom: 0.45rem;
+        font-family: "Exo 2", system-ui, sans-serif;
+        font-size: clamp(2.8rem, 9vw, 5rem);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.04);
+        pointer-events: none;
       }
 
-      .hero-brand-card .supporting {
+      .company-anchor strong {
+        display: block;
+        margin-bottom: 0.55rem;
+        font-family: "Exo 2", system-ui, sans-serif;
+        font-size: clamp(1.7rem, 3vw, 2.4rem);
+      }
+
+      .company-anchor p {
+        margin: 0;
+        max-width: 420px;
+        color: var(--muted);
+        font-size: 1.02rem;
+        line-height: 1.55;
+      }
+
+      .signal-grid {
         display: grid;
-        grid-template-columns: 80px 1fr;
-        gap: 1rem;
-        align-items: center;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
         margin-top: 1rem;
-        padding-top: 1rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
       }
 
-      .hero-brand-card .supporting img {
-        width: 80px;
-        height: 80px;
-        object-fit: contain;
-        border-radius: 18px;
-        border: 1px solid var(--line);
+      .signal-card {
+        padding: 1rem;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
         background: rgba(255, 255, 255, 0.03);
-        padding: 0.4rem;
       }
 
-      .hero-brand-card .supporting strong {
+      .signal-card span {
         display: block;
         margin-bottom: 0.35rem;
+        color: var(--cyan);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.82rem;
+      }
+
+      .signal-card strong {
+        display: block;
+        margin-bottom: 0.4rem;
         font-family: "Exo 2", system-ui, sans-serif;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+      }
+
+      .signal-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.45;
+        font-size: 0.96rem;
+      }
+
+      .portfolio-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 1rem;
+      }
+
+      .portfolio-strip span {
+        padding: 0.68rem 0.9rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        font-size: 0.92rem;
+        color: var(--text);
       }
 
       section.content-section {
@@ -361,33 +460,50 @@
       .section-header h2 {
         margin: 0;
         font-family: "Exo 2", system-ui, sans-serif;
-        font-size: clamp(2rem, 4vw, 3.1rem);
+        font-size: clamp(2rem, 4vw, 3.15rem);
       }
 
       .section-header p {
         margin: 0;
-        max-width: 850px;
+        max-width: 860px;
         color: var(--muted);
         font-size: 1.08rem;
-        line-height: 1.5;
+        line-height: 1.55;
       }
 
-      .flagship {
+      .product-grid {
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 1.4rem;
-        padding: 1.35rem;
-        border-radius: 30px;
-        border: 1px solid var(--line-strong);
-        background:
-          radial-gradient(circle at top left, rgba(45, 255, 178, 0.09), transparent 28%),
-          radial-gradient(circle at bottom right, rgba(50, 216, 255, 0.12), transparent 34%),
-          linear-gradient(180deg, rgba(13, 25, 43, 0.96), rgba(7, 16, 29, 0.96));
-        box-shadow: var(--shadow);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1.4rem;
       }
 
-      .flagship-copy {
-        padding: 0.5rem;
+      .card {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 26px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .card-body {
+        padding: 1.25rem;
+      }
+
+      .card-featured {
+        grid-column: span 2;
+        background:
+          radial-gradient(circle at top left, rgba(45, 255, 178, 0.09), transparent 32%),
+          radial-gradient(circle at bottom right, rgba(50, 216, 255, 0.12), transparent 36%),
+          linear-gradient(180deg, rgba(13, 25, 43, 0.96), rgba(7, 16, 29, 0.96));
+        border: 1px solid var(--line-strong);
+      }
+
+      .featured-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+        gap: 1.2rem;
+        align-items: stretch;
       }
 
       .badge-row {
@@ -411,91 +527,15 @@
         letter-spacing: 0.12em;
       }
 
-      .flagship h3 {
-        margin: 0 0 0.75rem;
+      .card h3,
+      .card h4 {
+        margin: 0 0 0.35rem;
         font-family: "Exo 2", system-ui, sans-serif;
+      }
+
+      .card-featured h3 {
         font-size: clamp(2rem, 3vw, 2.9rem);
-      }
-
-      .flagship p {
-        margin: 0 0 1rem;
-        color: var(--muted);
-        font-size: 1.08rem;
-        line-height: 1.55;
-      }
-
-      .feature-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.7rem;
-        margin: 1.2rem 0 1.4rem;
-      }
-
-      .feature-list span {
-        padding: 0.85rem 0.95rem;
-        border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        background: rgba(255, 255, 255, 0.03);
-        color: var(--text);
-      }
-
-      .flagship-visual {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-      }
-
-      .visual-card {
-        width: 100%;
-        border-radius: 28px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background:
-          radial-gradient(circle at top, rgba(50, 216, 255, 0.16), transparent 38%),
-          radial-gradient(circle at bottom left, rgba(45, 255, 178, 0.13), transparent 30%),
-          rgba(4, 11, 21, 0.84);
-        padding: 2rem 1.4rem;
-        text-align: center;
-      }
-
-      .visual-card img {
-        width: min(100%, 260px);
-        margin: 0 auto 1rem;
-        border-radius: 28px;
-        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42);
-      }
-
-      .visual-card strong {
-        display: block;
-        font-family: "Exo 2", system-ui, sans-serif;
-        font-size: 1.2rem;
-        margin-bottom: 0.45rem;
-      }
-
-      .visual-card p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 1rem;
-        line-height: 1.45;
-      }
-
-      .product-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
-        margin-top: 1.4rem;
-      }
-
-      .card {
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 24px;
-        background: var(--panel);
-        box-shadow: var(--shadow);
-        overflow: hidden;
-      }
-
-      .card-body {
-        padding: 1.2rem;
+        margin-bottom: 0.75rem;
       }
 
       .card-header {
@@ -517,9 +557,7 @@
       }
 
       .card h4 {
-        margin: 0 0 0.2rem;
-        font-family: "Exo 2", system-ui, sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.32rem;
       }
 
       .card .kicker {
@@ -561,13 +599,73 @@
         margin: 0 0 1rem;
         color: var(--muted);
         font-size: 1rem;
-        line-height: 1.5;
+        line-height: 1.55;
+      }
+
+      .feature-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+        margin: 1.2rem 0 1.4rem;
+      }
+
+      .feature-list span {
+        padding: 0.85rem 0.95rem;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text);
       }
 
       .card-actions {
         display: flex;
         gap: 0.7rem;
         flex-wrap: wrap;
+      }
+
+      .featured-visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .visual-card {
+        width: 100%;
+        border-radius: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at top, rgba(50, 216, 255, 0.16), transparent 38%),
+          radial-gradient(circle at bottom left, rgba(45, 255, 178, 0.13), transparent 30%),
+          rgba(4, 11, 21, 0.84);
+        padding: 2rem 1.4rem;
+        text-align: center;
+      }
+
+      .visual-card img.logo {
+        width: min(100%, 280px);
+        margin: 0 auto 1rem;
+        object-fit: contain;
+      }
+
+      .visual-card img.icon {
+        width: min(100%, 88px);
+        margin: 0 auto 1rem;
+        border-radius: 20px;
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42);
+      }
+
+      .visual-card strong {
+        display: block;
+        font-family: "Exo 2", system-ui, sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 0.45rem;
+      }
+
+      .visual-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.45;
       }
 
       .story-grid {
@@ -678,7 +776,6 @@
 
       @media (max-width: 1080px) {
         .hero-grid,
-        .flagship,
         .footer-grid,
         .story-grid,
         .product-grid {
@@ -686,43 +783,119 @@
         }
 
         .hero-grid > :first-child,
-        .flagship > :first-child,
-        .footer-grid > :first-child {
+        .footer-grid > :first-child,
+        .card-featured {
           grid-column: 1 / -1;
+        }
+
+        .featured-layout {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .hero-metrics,
+        .signal-grid {
+          grid-template-columns: 1fr;
         }
       }
 
       @media (max-width: 760px) {
+        .container {
+          width: min(calc(100% - 1.5rem), var(--max));
+        }
+
         .nav {
           flex-direction: column;
-          align-items: flex-start;
+          align-items: stretch;
           padding: 1rem 0;
         }
 
+        .brand {
+          width: 100%;
+        }
+
         .nav-links {
-          gap: 0.85rem;
+          width: 100%;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0.75rem;
+        }
+
+        .nav-links a:not(.btn) {
+          padding: 0.1rem 0;
+        }
+
+        .nav-links .btn {
+          width: 100%;
         }
 
         .hero {
-          padding-top: 4.75rem;
+          padding-top: 4.2rem;
+        }
+
+        .hero h1 {
+          max-width: 7ch;
+          font-size: clamp(2.35rem, 11vw, 3.2rem);
+          line-height: 0.96;
+          letter-spacing: -0.03em;
+          overflow-wrap: anywhere;
+          word-break: break-word;
+        }
+
+        .hero h1 .gradient {
+          display: inline;
+        }
+
+        .hero-panel {
+          padding: 1rem;
+          border-radius: 28px;
+        }
+
+        .company-panel .topline {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .company-anchor {
+          padding: 1.2rem;
+        }
+
+        .hero p.lead,
+        .hero p.sublead {
+          font-size: 1rem;
         }
 
         .hero-grid,
-        .flagship,
-        .feature-list,
         .product-grid,
         .story-grid,
-        .footer-grid {
+        .footer-grid,
+        .feature-list,
+        .hero-metrics,
+        .signal-grid {
           grid-template-columns: 1fr;
         }
 
-        .hero-brand-card .supporting {
-          grid-template-columns: 1fr;
-          text-align: center;
+        .hero-copy,
+        .company-anchor p,
+        .section-header p,
+        .cta-strip p {
+          max-width: none;
         }
 
-        .hero-brand-card .supporting img {
-          margin: 0 auto;
+        .hero-points span,
+        .portfolio-strip span {
+          width: 100%;
+        }
+
+        .hero-actions,
+        .card-actions {
+          width: 100%;
+        }
+
+        .hero-actions .btn,
+        .card-actions .btn {
+          flex: 1 1 100%;
         }
 
         .cta-strip {
@@ -735,7 +908,7 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="#top">
-          <img class="brand-mark" src="./assets/icon_concept_01_neural_s_1024.png" alt="SynapseAI Neural S icon" />
+          <span class="brand-badge" aria-hidden="true">NLD</span>
           <div class="brand-copy">
             <strong>Next Level Digital</strong>
             <span>LLC</span>
@@ -746,7 +919,7 @@
           <a href="#products">Products</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
-          <a class="btn btn-primary" href="https://synapseai-42jh.polsia.app" target="_blank" rel="noopener noreferrer">Launch App</a>
+          <a class="btn btn-primary" href="#products">Explore Portfolio</a>
         </nav>
       </div>
     </header>
@@ -754,94 +927,84 @@
     <main id="top">
       <section class="hero">
         <div class="container hero-grid">
-          <div>
-            <span class="eyebrow">Next Level Digital portfolio</span>
+          <div class="hero-copy">
+            <span class="eyebrow">Next Level Digital LLC</span>
             <h1>
-              Building AI products with
-              <span class="gradient">SynapseAI</span>
-              out front.
+              Building <span class="gradient">AI-powered software products</span>
+              for real-world scale.
             </h1>
             <p class="lead">
-              Next Level Digital is a product-focused AI studio shipping practical tools for real users. <strong>SynapseAI</strong> now leads the portfolio as the flagship affordable AI and machine learning education platform, with direct live access available now.
+              Next Level Digital is the company first — a serious software business designing, launching, and growing premium AI products across learning, operations, and field-ready problem solving.
+            </p>
+            <p class="sublead">
+              For investors, partners, and first-time visitors, the signal is immediate: this is a product-focused company with a live flagship, an expanding portfolio, and the discipline to build software people can actually use.
             </p>
             <div class="hero-points">
-              <span>Flagship product: SynapseAI</span>
-              <span>Affordable self-paced AI learning</span>
-              <span>Python, ML, and AI systems curriculum</span>
+              <span>AI-first product execution</span>
+              <span>Multi-product portfolio</span>
+              <span>Live flagship platform</span>
+              <span>Dark, modern premium brand</span>
             </div>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="https://synapseai-42jh.polsia.app" target="_blank" rel="noopener noreferrer">Launch SynapseAI</a>
-              <a class="btn btn-secondary" href="#products">View Product Portfolio</a>
+              <a class="btn btn-primary" href="#products">View Product Portfolio</a>
+              <a class="btn btn-secondary" href="https://synapseai-42jh.polsia.app" target="_blank" rel="noopener noreferrer">Launch SynapseAI</a>
+            </div>
+            <div class="hero-metrics" aria-label="Company snapshot metrics">
+              <div class="metric-card">
+                <strong>3</strong>
+                <span>Products currently showcased across education, operations, and safety.</span>
+              </div>
+              <div class="metric-card">
+                <strong>1</strong>
+                <span>Live flagship platform already available for direct access today.</span>
+              </div>
+              <div class="metric-card">
+                <strong>AI</strong>
+                <span>Embedded into the company roadmap, product thinking, and execution model.</span>
+              </div>
             </div>
           </div>
 
-          <aside class="hero-panel hero-brand-card" aria-label="SynapseAI featured branding">
+          <aside class="hero-panel company-panel" aria-label="Next Level Digital company overview">
             <div class="topline">
-              <span>Featured brand</span>
-              <span>Live</span>
+              <span>Company snapshot</span>
+              <span>AI Product Studio</span>
             </div>
-            <div class="logo-frame">
-              <img src="./assets/logo_concept_03_brain.png" alt="SynapseAI horizontal logo" />
+            <div class="company-anchor">
+              <strong>Next Level Digital, LLC</strong>
+              <p>
+                A premium software company focused on shipping practical AI-powered products with bold positioning, sharp execution, and room to scale.
+              </p>
             </div>
-            <div class="supporting">
-              <img src="./assets/icon_concept_01_neural_s_1024.png" alt="SynapseAI app icon" />
-              <div>
+            <div class="signal-grid">
+              <div class="signal-card">
+                <span>Flagship</span>
                 <strong>SynapseAI</strong>
-                <span style="color: var(--muted); line-height: 1.5; display: block;">
-                  The Neural S icon is now used as the product thumbnail, while the full horizontal brain logo anchors major branding areas across the site for SynapseAI's education-focused brand.
-                </span>
+                <p>Affordable AI and machine learning education platform with live access now.</p>
               </div>
+              <div class="signal-card">
+                <span>Pipeline</span>
+                <strong>Project Pro + HIKED</strong>
+                <p>Operational estimating and outdoor safety products expanding the portfolio.</p>
+              </div>
+              <div class="signal-card">
+                <span>Positioning</span>
+                <strong>Company-first story</strong>
+                <p>The business leads the narrative, with products reinforcing depth and momentum.</p>
+              </div>
+              <div class="signal-card">
+                <span>Focus</span>
+                <strong>Real-world utility</strong>
+                <p>Products built around actual user problems instead of empty AI theater.</p>
+              </div>
+            </div>
+            <div class="portfolio-strip" aria-label="Portfolio categories">
+              <span>Education</span>
+              <span>Operations</span>
+              <span>Outdoor Safety</span>
+              <span>AI Systems</span>
             </div>
           </aside>
-        </div>
-      </section>
-
-      <section class="content-section" id="flagship">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Flagship platform</span>
-            <h2>SynapseAI leads as the flagship learning platform.</h2>
-            <p>
-              SynapseAI is now presented as the center of the portfolio experience. The product is visually elevated, surfaced first in the portfolio lineup, and linked directly to the live app for immediate access.
-            </p>
-          </div>
-
-          <div class="flagship">
-            <div class="flagship-copy">
-              <div class="badge-row">
-                <span class="badge">Flagship product</span>
-                <span class="badge">Live enrollment enabled</span>
-                <span class="badge">Prominent SynapseAI branding</span>
-              </div>
-              <h3>Affordable self-paced AI education for people changing careers into tech.</h3>
-              <p>
-                SynapseAI is positioned as the primary product within the Next Level Digital ecosystem. It is an affordable AI and machine learning education platform built through Polsia for people looking to make a career change into AI and tech.
-              </p>
-              <p>
-                For $49.99 per month, learners can study Python Basics, Machine Learning, and AI Systems at their own pace and skip bootcamps that can cost $7,000 or more.
-              </p>
-              <div class="feature-list">
-                <span>Python Basics curriculum</span>
-                <span>Machine Learning curriculum</span>
-                <span>AI Systems curriculum</span>
-                <span>$49.99/month self-paced access</span>
-              </div>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="https://synapseai-42jh.polsia.app" target="_blank" rel="noopener noreferrer">Launch App</a>
-                <a class="btn btn-secondary" href="#contact">Get in Touch</a>
-              </div>
-            </div>
-
-            <div class="flagship-visual">
-              <div class="visual-card">
-                <img src="./assets/icon_concept_01_neural_s_1024.png" alt="SynapseAI product icon" />
-                <strong>SynapseAI product thumbnail</strong>
-                <p>
-                  The Neural S icon is now the dedicated visual thumbnail for the SynapseAI card and featured presentation of the education platform.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -851,26 +1014,47 @@
             <span class="eyebrow">Product portfolio</span>
             <h2>AI-powered products built to solve practical problems.</h2>
             <p>
-              The portfolio highlights the breadth of Next Level Digital while making it unmistakable that <strong>SynapseAI</strong> is the lead product. The live learning platform is linked directly from both the flagship section and the product card below.
+              The portfolio now follows the company introduction the way it should: <strong>Next Level Digital</strong> leads the first impression, and the products prove the company can execute. <strong>SynapseAI</strong> remains the flagship, followed by Project Pro and HIKED.
             </p>
           </div>
 
           <div class="product-grid">
-            <article class="card">
-              <div class="card-body">
-                <div class="card-header">
-                  <img class="card-icon" src="./assets/icon_concept_01_neural_s_1024.png" alt="SynapseAI icon" />
-                  <div>
-                    <h4>SynapseAI</h4>
-                    <p class="kicker">Flagship AI &amp; Machine Learning Education Platform</p>
-                    <span class="status status-live">Live — Flagship Product</span>
+            <article class="card card-featured" id="flagship">
+              <div class="card-body featured-layout">
+                <div>
+                  <div class="badge-row">
+                    <span class="badge">Flagship product</span>
+                    <span class="badge">Live enrollment enabled</span>
+                    <span class="badge">Direct launch available</span>
+                  </div>
+                  <h3>SynapseAI leads the portfolio as the live flagship platform.</h3>
+                  <p>
+                    SynapseAI is the clearest expression of the company’s current momentum: an affordable AI and machine learning education platform for people making a serious move into tech.
+                  </p>
+                  <p>
+                    For $49.99 per month, learners can study Python Basics, Machine Learning, and AI Systems at their own pace and avoid bootcamps that can cost $7,000 or more.
+                  </p>
+                  <div class="feature-list">
+                    <span>Python Basics curriculum</span>
+                    <span>Machine Learning curriculum</span>
+                    <span>AI Systems curriculum</span>
+                    <span>$49.99/month self-paced access</span>
+                  </div>
+                  <div class="card-actions">
+                    <a class="btn btn-primary" href="https://synapseai-42jh.polsia.app" target="_blank" rel="noopener noreferrer">Launch App</a>
+                    <a class="btn btn-secondary" href="#contact">Get in Touch</a>
                   </div>
                 </div>
-                <p>
-                  An affordable AI and machine learning education platform. Learn Python, ML, and AI systems at your own pace for $49.99/month — skip the $7K bootcamp.
-                </p>
-                <div class="card-actions">
-                  <a class="btn btn-primary" href="https://synapseai-42jh.polsia.app" target="_blank" rel="noopener noreferrer">Launch App</a>
+
+                <div class="featured-visual">
+                  <div class="visual-card">
+                    <img class="logo" src="./assets/logo_concept_03_brain.png" alt="SynapseAI logo" />
+                    <img class="icon" src="./assets/icon_concept_01_neural_s_1024.png" alt="SynapseAI product icon" />
+                    <strong>Live flagship experience</strong>
+                    <p>
+                      SynapseAI stays elevated inside the product portfolio without taking over the company story at the very top of the site.
+                    </p>
+                  </div>
                 </div>
               </div>
             </article>
@@ -942,7 +1126,7 @@
             <article class="story-card">
               <strong>Flagship clarity</strong>
               <p>
-                SynapseAI now stands at the front of the portfolio as the clearest expression of the company’s present momentum and future roadmap in affordable AI education.
+                SynapseAI remains the clearest signal of present traction, while the broader portfolio shows the company is building beyond a single product story.
               </p>
             </article>
           </div>
@@ -953,9 +1137,9 @@
         <div class="container">
           <div class="cta-strip">
             <div>
-              <h3>Ready to see the flagship product live?</h3>
+              <h3>Ready to see what Next Level Digital is building?</h3>
               <p>
-                Launch SynapseAI directly, or reach out to Next Level Digital to talk affordable AI education, platform growth, or future collaboration.
+                Launch the live flagship product, or reach out to talk company growth, collaboration, platform strategy, or future investment opportunities.
               </p>
             </div>
             <div class="hero-actions">
@@ -972,14 +1156,14 @@
         <div class="footer-grid">
           <div>
             <div class="brand" style="margin-bottom: 1rem;">
-              <img class="brand-mark" src="./assets/logo_concept_03_brain.png" alt="SynapseAI horizontal logo" style="width: 140px; height: 56px; border-radius: 14px; padding: 0.4rem 0.55rem;" />
+              <span class="brand-badge" aria-hidden="true">NLD</span>
               <div class="brand-copy">
                 <strong>Next Level Digital</strong>
                 <span>LLC</span>
               </div>
             </div>
             <p>
-              AI-powered digital products led by SynapseAI, the flagship affordable AI and machine learning education platform now featured prominently across the portfolio.
+              AI-powered software products built around real-world use cases, led by SynapseAI and strengthened by an expanding company portfolio.
             </p>
           </div>
           <div>
@@ -1002,7 +1186,7 @@
         </div>
         <div class="footer-bottom">
           <span>© <span id="year"></span> Next Level Digital, LLC. All rights reserved.</span>
-          <span>Flagship branding updated with SynapseAI education-platform messaging and direct launch path.</span>
+          <span>Company-first landing experience with flagship product portfolio following the hero.</span>
         </div>
       </div>
     </footer>
@@ -1011,5 +1195,5 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
     <script src="https://ionos.ai-voice-receptionist.com/chat-scripts-MqGN74WP/web-chat.js" name="web-chat" data-client-secret="b93bdf3c-4b4c-445f-8bf2-133c425db7c9"></script>
-</body>
+  </body>
 </html>
