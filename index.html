@@ -11,7 +11,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
       /* ═══════════════════════════════════════════════════════════
          NEXT LEVEL DIGITAL — PREMIUM PORTFOLIO
@@ -38,7 +38,7 @@
         --blue-bright:   #5b9cf6;
         --silver:        #c8daea;
         --silver-dim:    #8fafc8;
-        --display:       'Syncopate', 'Michroma', 'Audiowide', system-ui, sans-serif;
+        --display:       'Rajdhani', system-ui, sans-serif;
         --body:          'Inter', system-ui, -apple-system, sans-serif;
         --mono:          'JetBrains Mono', 'Courier New', monospace;
         --max:           1200px;
@@ -213,11 +213,9 @@
         flex-shrink: 0;
       }
       .brand-logo {
-        width: 140px;
+        width: 160px;
         height: auto;
         display: block;
-        mix-blend-mode: lighten;
-        filter: brightness(1.08) contrast(1.05);
       }
 
       .nav-links {
@@ -351,7 +349,6 @@
         width: 500px;
         height: auto;
         opacity: 0.04;
-        mix-blend-mode: lighten;
         pointer-events: none;
         user-select: none;
       }
@@ -374,11 +371,10 @@
 
       .hero h1 {
         font-family: var(--display);
-        font-size: clamp(2rem, 5.5vw, 3.8rem);
+        font-size: clamp(2.4rem, 6vw, 4.5rem);
         font-weight: 700;
-        line-height: 1.1;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
+        line-height: 1.05;
+        letter-spacing: -0.01em;
         color: var(--text);
         margin-bottom: 1.75rem;
         animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
@@ -425,10 +421,9 @@
 
       .section-title {
         font-family: var(--display);
-        font-size: clamp(1.1rem, 2.5vw, 1.65rem);
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
+        font-size: clamp(1.4rem, 3vw, 2.2rem);
+        font-weight: 600;
+        letter-spacing: -0.01em;
         line-height: 1.3;
         color: var(--text);
         margin-bottom: 1rem;
@@ -502,10 +497,9 @@
 
       .card-featured h3 {
         font-family: var(--display);
-        font-size: clamp(0.9rem, 2vw, 1.2rem);
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
+        font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+        font-weight: 600;
+        letter-spacing: -0.01em;
         color: var(--text);
         margin-bottom: 0.85rem;
         line-height: 1.35;
@@ -610,13 +604,12 @@
 
       .card-title-group h4 {
         font-family: var(--display);
-        font-size: 0.85rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
+        font-size: 1.15rem;
+        font-weight: 600;
+        letter-spacing: 0;
         color: var(--text);
         margin-bottom: 0.3rem;
-        margin-top: 0.4rem;
+        margin-top: 0.2rem;
       }
       .card-title-group .kicker {
         font-family: var(--mono);
@@ -721,10 +714,9 @@
       }
       .about-cell h4 {
         font-family: var(--display);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0;
         color: var(--text);
         margin-bottom: 0.65rem;
       }
@@ -777,10 +769,9 @@
 
       .cta-copy h3 {
         font-family: var(--display);
-        font-size: clamp(0.9rem, 2vw, 1.2rem);
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
+        font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+        font-weight: 600;
+        letter-spacing: -0.01em;
         color: var(--text);
         margin-bottom: 0.65rem;
       }
@@ -837,10 +828,8 @@
         max-width: 280px;
       }
       .footer-logo {
-        width: 120px;
+        width: 130px;
         height: auto;
-        mix-blend-mode: lighten;
-        filter: brightness(1.08) contrast(1.05);
       }
       .footer-col h5 {
         font-family: var(--mono);
@@ -889,7 +878,7 @@
 
       @media (max-width: 768px) {
         .hero { padding: 5rem 0 4rem; min-height: auto; }
-        .hero h1 { font-size: clamp(1.5rem, 8vw, 2.4rem); }
+        .hero h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
         .nav-links { display: none; }
         .hamburger { display: flex; }
         .product-grid { grid-template-columns: 1fr; }
@@ -904,7 +893,7 @@
       }
 
       @media (max-width: 480px) {
-        .hero h1 { font-size: clamp(1.3rem, 10vw, 1.8rem); }
+        .hero h1 { font-size: clamp(1.6rem, 10vw, 2.2rem); }
         .card-featured-inner { padding: 1.5rem; }
         .card-product { padding: 1.5rem; }
         .section-title { font-size: clamp(0.9rem, 5vw, 1.1rem); }
@@ -917,7 +906,7 @@
     <header class="site-header">
       <div class="container nav-bar">
         <a class="brand" href="#top" aria-label="Next Level Digital home">
-          <img class="brand-logo" src="./assets/nld-logo-arrow.jpg" alt="Next Level Digital" />
+          <img class="brand-logo" src="./assets/nld-logo-arrow.png" alt="Next Level Digital" />
         </a>
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="#products">Products</a>
@@ -946,7 +935,7 @@
         <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
         <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
         <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
-        <img class="hero-watermark" src="./assets/nld-logo-blocks.jpg" alt="" aria-hidden="true" />
+        <img class="hero-watermark" src="./assets/nld-logo-blocks.png" alt="" aria-hidden="true" />
         <div class="container">
           <div class="hero-inner">
             <div class="hero-label">
@@ -1105,7 +1094,7 @@
       <div class="container">
         <div class="footer-inner">
           <div class="footer-brand">
-            <img class="footer-logo" src="./assets/nld-logo-arrow.jpg" alt="Next Level Digital" />
+            <img class="footer-logo" src="./assets/nld-logo-arrow.png" alt="Next Level Digital" />
             <p>AI-powered software built around real problems. We ship products that work for the people who need them.</p>
           </div>
           <div class="footer-col">
